@@ -11,7 +11,7 @@ void reshape(int width, int height){
     glOrtho(0, width, height, 0, 0, 1);
     glMatrixMode(GL_MODELVIEW);
 }
-
+//Incremental
 void line(int x1, int y1, int x2, int y2){
     int x, y;
     float a;
@@ -22,6 +22,30 @@ void line(int x1, int y1, int x2, int y2){
         glVertex2f(x, y); //write_pixel(x, y, color);
     }
 }
+//Punto medio
+void lineM(int x1, int y1, int x2, int y2){
+    GLfloat dx, dy, incE, incNE, d, x, y;
+    dx = x2 - x1;
+        dy = y2 - y1;
+        d = 2 * dy-dx;
+        incE = 2 * dy;
+        incNE = 2 * (dy-dx);
+        x=x1;
+        y=y1;
+        glVertex2f(x,y);
+        while(x<x2){
+            if(d<=0){
+                d = d + incE;
+                x++;
+        }else{
+
+            d = d + incNE;
+            x++;
+            y++;
+        }
+        glVertex2f(x,y);
+        }
+}
 
 void display() {
    glClear(GL_COLOR_BUFFER_BIT);         // Clear the color buffer (background)
@@ -29,7 +53,8 @@ void display() {
    glLoadIdentity();
 
    glBegin(GL_POINTS);
-    line(100, 150, 300, 250);
+    //line(100, 150, 300, 250); //line(x1, y1, x2, y2) Incremental
+    lineM(100, 150, 300, 250); //lineM(x1, y1, x2, y2) Punto medio
    glEnd();
 
    glFlush();  // Render now
