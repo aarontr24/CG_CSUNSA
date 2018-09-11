@@ -1,1 +1,2 @@
-#COMPUTACION GRAFICA - CSUNSA
+# COMPUTACION GRAFICA - CSUNSA
+Trabajos de laboratorio y practica.
