@@ -20,7 +20,7 @@ void polygon(int n){
     float h = glutGet(GLUT_WINDOW_HEIGHT);
     float xc = w/2;
     float yc = h/2;
-    float radio = h/3;
+    float radio = h/3; // Radio es un tercio de la altura de la pantalla
     float x, y, x1, y1;
     float vertex = 360/n;
 
@@ -44,7 +44,7 @@ void display() {
    glColor3f(1.0f, 0.0f, 0.0f); // Red
    glLoadIdentity();
 
-   polygon(8); //poligon(#lados)
+   polygon(8); // poligon(#lados) Recibe el número de lados
 
    glFlush();  // Render now
 }
