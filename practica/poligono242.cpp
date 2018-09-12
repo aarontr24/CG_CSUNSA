@@ -41,7 +41,7 @@ void display() {
    glColor3f(1.0f, 0.0f, 0.0f); // Red
    glLoadIdentity();
    float Radio = 150;
-   int N = 2*static_cast<int>(static_cast<float>(M_PI)*Radio);
+   int N = 2*static_cast<int>(static_cast<float>(M_PI)*Radio); // Calculo de los lados de la circunferencia n = 2*pi*radio.
    cout<<N<<endl;
    polygon(Radio, N); //poligon(radio, #lados)
    glFlush();  // Render now
