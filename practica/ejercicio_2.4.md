@@ -4,15 +4,26 @@
 Escriba un programa (en C) que dibuje un polıgono regular (es decir, un polıgono con lados de longitudes iguales y ángulos internos iguales) con un radio igual a un tercio de la altura de la pantalla, y centro en el centro de la pantalla. El programa debe solicitar el número de vértices, n.
 
   ##### SOLUCIÓN
-  [Código fuente](poligono241.cpp)
+  [Código fuente 2.4.1](poligono241.cpp)
   ##### CAPTURAS
   ![screenshot](imgs/poligono8.png)
   
 
 ### 2.4.2
-Modifique el programa del ejercicio anterior para solicitar también el radio r del circulo que circunscribe el poligono. Haga que su programa estime el número n de vértices necesarios para que el polıgono parezca una "buena aproximación" para un circulo. Utilizando los parámetros ndh, ndv, width, height del dispositivo, obtenga una relación teórica entre n y r para la aproximación de circulos a través de poligonos.
+Modifique el programa del ejercicio anterior para solicitar también el radio r del circulo que circunscribe el poligono. Haga que su programa estime el número n de vértices necesarios para que el poligono parezca una "buena aproximación" para un circulo. Utilizando los parámetros ndh, ndv, width, height del dispositivo, obtenga una relación teórica entre n y r para la aproximación de circulos a través de poligonos.
 
   ##### SOLUCIÓN
+  La relacion teorica entre los parametros ndh, ndv, width, height del dispositivo se dan mediante la formula de la circunferencia, de la siguiente forma:
+  Para ndh = width y ndv = height se cumple.
+  ```bash
+      n = 2*pi*(ndh/width*r)
+      or
+      n = 2*pi*(ndv/height*r)
+  ```
+  
+  [Código fuente 2.4.2](poligono242.cpp)
+  ##### CAPTURAS
+  ![screenshot](imgs/circulo.png)
 
 
 
