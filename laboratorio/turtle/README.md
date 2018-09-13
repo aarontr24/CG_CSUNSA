@@ -12,3 +12,8 @@ Se dibuja la tortuga segun las instrucciones con dos vectores x[ ] e y[ ], y se 
 * z => MAXIMIZATION
 * x => MINIMIZATION
 
+#### Capturas
+
+![screenshot](imgs/img1.png)
+![screenshot](imgs/img2.png)
+![screenshot](imgs/img3.png)
